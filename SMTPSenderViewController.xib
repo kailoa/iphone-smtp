@@ -185,8 +185,9 @@
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<string key="IBUIText">Hello From Test App</string>
+						<string key="IBUIText"/>
 						<int key="IBUIBorderStyle">3</int>
+						<string key="IBUIPlaceholder">message subject</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MAA</bytes>
@@ -206,8 +207,9 @@
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<string type="base64-UTF8" key="IBUIText">VGhlcmUgc2hvdWxkIGJlIGFuIGltYWdlIGF0dGFjaG1lbnQgdGhhdCBTYXlzICJTdWNjZXNzIi4</string>
+						<string key="IBUIText"/>
 						<int key="IBUIBorderStyle">3</int>
+						<string key="IBUIPlaceholder">message body</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MAA</bytes>
@@ -227,8 +229,9 @@
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<string type="base64-UTF8" key="IBUIText">IFRlc3QgVW5pY29kZTrimIMs5ryi5a2XA</string>
+						<string key="IBUIText"/>
 						<int key="IBUIBorderStyle">3</int>
+						<string key="IBUIPlaceholder">message signature</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MAA</bytes>
@@ -562,14 +565,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">message</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="749465191"/>
-					</object>
-					<int key="connectionID">39</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">sig</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="45947791"/>
@@ -717,6 +712,14 @@
 					</object>
 					<int key="connectionID">65</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">messageBody</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="749465191"/>
+					</object>
+					<int key="connectionID">66</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -747,7 +750,6 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="963176017"/>
 							<reference ref="44324381"/>
-							<reference ref="45947791"/>
 							<reference ref="6968093"/>
 							<reference ref="1045314649"/>
 							<reference ref="98476503"/>
@@ -766,10 +768,11 @@
 							<reference ref="1051385260"/>
 							<reference ref="988860931"/>
 							<reference ref="1034150884"/>
-							<reference ref="749465191"/>
 							<reference ref="955734215"/>
 							<reference ref="680288267"/>
 							<reference ref="341483819"/>
+							<reference ref="749465191"/>
+							<reference ref="45947791"/>
 						</object>
 						<reference key="parent" ref="360949347"/>
 					</object>
@@ -869,11 +872,6 @@
 						<reference key="parent" ref="774585933"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">27</int>
-						<reference key="object" ref="749465191"/>
-						<reference key="parent" ref="774585933"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">28</int>
 						<reference key="object" ref="45947791"/>
 						<reference key="parent" ref="774585933"/>
@@ -901,6 +899,11 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">49</int>
 						<reference key="object" ref="1051385260"/>
+						<reference key="parent" ref="774585933"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">27</int>
+						<reference key="object" ref="749465191"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
 				</object>
@@ -994,7 +997,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">65</int>
+			<int key="maxID">66</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1028,7 +1031,7 @@
 							<string>SSLSwitch</string>
 							<string>fromEmail</string>
 							<string>login</string>
-							<string>message</string>
+							<string>messageBody</string>
 							<string>password</string>
 							<string>relayHost</string>
 							<string>sendImageSwitch</string>
@@ -1070,7 +1073,7 @@
 			</object>
 		</object>
 		<int key="IBDocument.localizationMode">0</int>
-		<string key="IBDocument.LastKnownRelativeProjectPath">SMTPSender6T.xcodeproj</string>
+		<string key="IBDocument.LastKnownRelativeProjectPath">SMTPSender-Example.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 	</data>
 </archive>

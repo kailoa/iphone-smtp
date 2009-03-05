@@ -2,6 +2,41 @@
 
 @implementation SMTPSenderViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    prefKeyDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
+                         toEmail, TO_EMAIL_PREF_KEY,
+                         fromEmail, FROM_EMAIL_PREF_KEY,
+                         relayHost, RELAY_HOST_PREF_KEY,
+                         SSLSwitch, USE_SSL_BOOL_PREF_KEY,
+                         useAuthSwitch, USE_AUTH_BOOL_PREF_KEY,
+                         login, AUTH_USERNAME_PREF_KEY,
+                         password, AUTH_PASSWORD_PREF_KEY,
+                         subject, MESSAGE_SUBJECT_PREF_KEY,
+                         messageBody, MESSAGE_BODY_PREF_KEY,
+                         sig, MESSAGE_SIG_PREF_KEY,
+                         sendImageSwitch, SEND_IMAGE_BOOL_PREF_KEY,
+                         sendVCFSwitch, SEND_VCARD_BOOL_PREF_KEY,
+                         nil];
+
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSArray *pref_keys = [NSArray arrayWithArray:[prefKeyDictionary allKeys]];
+    for (id pref_key in pref_keys)
+    {
+        id ui_element = [prefKeyDictionary objectForKey:pref_key];
+        if ([ui_element isKindOfClass:[UITextField class]])
+        {
+            ((UITextField *)ui_element).text = [defaults stringForKey:pref_key];
+        }
+        else if ([ui_element isKindOfClass:[UISwitch class]])
+        {
+            ((UISwitch *)ui_element).on = [defaults boolForKey:pref_key];
+        }
+    }
+
+}
+
 #pragma mark IBActions
 - (IBAction)sendMail:(id)sender 
 {
@@ -27,7 +62,7 @@
     //This should give you an idea of the proper format and options you need
     NSDictionary *plain_text_part = [NSDictionary dictionaryWithObjectsAndKeys:
                                      @"text/plain\r\n\tcharset=UTF-8;\r\n\tformat=flowed", kSKPSMTPPartContentTypeKey,
-                                     [message.text stringByAppendingString:@"\n"], kSKPSMTPPartMessageKey,
+                                     [messageBody.text stringByAppendingString:@"\n"], kSKPSMTPPartMessageKey,
                                      @"quoted-printable", kSKPSMTPPartContentTransferEncodingKey,
                                      nil];
     [parts_to_send addObject:plain_text_part];
@@ -89,8 +124,11 @@
 #pragma mark UITextField Delegate Methods
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    [textField resignFirstResponder];
-
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *current_pref_key_array = [prefKeyDictionary allKeysForObject:textField];
+    NSString *current_pref_key = [current_pref_key_array objectAtIndex:0];
+    DEBUGLOG(@"Setting Preference for key: %@ to: %@", current_pref_key, textField.text);
+    [defaults setObject:textField.text forKey:current_pref_key];
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {

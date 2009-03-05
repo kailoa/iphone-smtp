@@ -38,7 +38,32 @@
 @synthesize window;
 @synthesize viewController;
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {    
+- (void)applicationDidFinishLaunching:(UIApplication *)application 
+{    
+	NSString *test_value = [[NSUserDefaults standardUserDefaults] stringForKey:MESSAGE_SIG_PREF_KEY];
+	if (test_value == nil)
+	{
+        DEBUGLOG(@"No default values set, Creating...");
+		// since no default values have been set (i.e. no preferences file created), create it here
+		NSDictionary *app_defaults = [NSDictionary dictionaryWithObjectsAndKeys:
+                                      @"receiver@example.com", TO_EMAIL_PREF_KEY,
+                                      @"sender@example.com", FROM_EMAIL_PREF_KEY,
+                                      @"mail.example.com", RELAY_HOST_PREF_KEY,
+                                      [NSNumber numberWithBool:YES], USE_SSL_BOOL_PREF_KEY,
+                                      [NSNumber numberWithBool:YES], USE_AUTH_BOOL_PREF_KEY,
+                                      @"", AUTH_USERNAME_PREF_KEY,
+                                      @"", AUTH_PASSWORD_PREF_KEY,
+                                      @"Hello From Test App", MESSAGE_SUBJECT_PREF_KEY,
+                                      @"There should be an image attachment that Says \"Success\".\n\n", MESSAGE_BODY_PREF_KEY,
+                                      @"\n\nTest Unicode:☃,漢字", MESSAGE_SIG_PREF_KEY,
+                                      [NSNumber numberWithBool:YES], SEND_IMAGE_BOOL_PREF_KEY,
+                                      [NSNumber numberWithBool:NO], SEND_VCARD_BOOL_PREF_KEY,
+									  nil];
+		
+		[[NSUserDefaults standardUserDefaults] registerDefaults:app_defaults];
+		[[NSUserDefaults standardUserDefaults] synchronize];
+	}
+    
     
     // Override point for customization after app launch    
     [window addSubview:viewController.view];
