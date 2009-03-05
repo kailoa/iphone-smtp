@@ -1,10 +1,12 @@
 iPhone-SMTP
 
-This is a fork of the skpsmtpmessage library
+This is a fork of the SKPSMTPMessage library
 http://code.google.com/p/skpsmtpmessage/
 
+See the original author's blog entry on the subject:
+http://blog.skorpiostech.com/2009/02/11/skpsmptmessage-economics-of-open-source/
 
-This is not intended to be full SMTP implementation, but rather a simple 
+This is not intended to be full SMTP implementation, but rather a simple way of sending emails without the limitations of the mailto: URL handler in the iPhone SDK.
 
 ## Necessary Components
 
