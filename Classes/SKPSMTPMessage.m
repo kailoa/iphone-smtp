@@ -337,6 +337,8 @@ NSString *kSKPSMTPPartContentTransferEncodingKey = @"kSKPSMTPPartContentTransfer
             [self stopWatchdog];
             
             DEBUGLOG(@"S: %@", tmpLine);
+            [delegate messageState:sendState];
+            
             switch (sendState)
             {
                 case kSKPSMTPConnecting:
@@ -881,4 +883,5 @@ NSString *kSKPSMTPPartContentTransferEncodingKey = @"kSKPSMTPPartContentTransfer
     outputStream = nil;
 }
 
+void DummyLog(NSString * format, ...) {return;}
 @end

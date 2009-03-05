@@ -101,6 +101,11 @@
     
     test_smtp_message.parts = parts_to_send;
     
+    Spinner.hidden = NO;
+    [Spinner startAnimating];
+    ProgressBar.hidden = NO;
+    HighestState = 0;
+    
     [test_smtp_message send];
 }
 
@@ -137,20 +142,36 @@
 }
 
 #pragma mark SKPSMTPMessage Delegate Methods
-
+-(void)messageState:(SKPSMTPState)messageState;
+{
+    NSLog(@"HighestState:%d", HighestState);
+    if (messageState > HighestState)
+        HighestState = messageState;
+    
+    ProgressBar.progress = (float)HighestState/(float)kSKPSMTPWaitingSendSuccess;
+}
 - (void)messageSent:(SKPSMTPMessage *)SMTPmessage
 {
     [SMTPmessage release];
+
+    Spinner.hidden = YES;
+    [Spinner stopAnimating];
+    ProgressBar.hidden = YES;
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Sent!"
                                                    delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [alert show];    
     [alert release];
     DEBUGLOG(@"delegate - message sent");
+
 }
 - (void)messageFailed:(SKPSMTPMessage *)SMTPmessage error:(NSError *)error
 {
     [SMTPmessage release];
+    
+    Spinner.hidden = YES;
+    [Spinner stopAnimating];
+    ProgressBar.hidden = YES;
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[error localizedDescription]
                                                    delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];

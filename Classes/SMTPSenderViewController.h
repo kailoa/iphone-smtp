@@ -36,6 +36,10 @@
     IBOutlet UISwitch *sendImageSwitch;
     IBOutlet UISwitch *sendVCFSwitch;
     
+    IBOutlet UIActivityIndicatorView *Spinner;
+    IBOutlet UIProgressView *ProgressBar;
+    SKPSMTPState HighestState;
+    
     NSDictionary *prefKeyDictionary;
 }
 - (IBAction)sendMail:(id)sender;

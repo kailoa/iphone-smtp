@@ -39,7 +39,7 @@
 					<object class="IBUIButton" id="988860931">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 371}, {74, 69}}</string>
+						<string key="NSFrame">{{20, 371}, {74, 59}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -446,7 +446,7 @@
 					<object class="IBUILabel" id="437848865">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{25, 371}, {173, 21}}</string>
+						<string key="NSFrame">{{102, 371}, {96, 21}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -461,7 +461,7 @@
 					<object class="IBUILabel" id="1051385260">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{25, 406}, {173, 21}}</string>
+						<string key="NSFrame">{{102, 406}, {96, 21}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -473,6 +473,25 @@
 						<float key="IBUIMinimumFontSize">1.000000e+01</float>
 						<int key="IBUITextAlignment">2</int>
 					</object>
+					<object class="IBUIProgressView" id="446952870">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">-2147483356</int>
+						<string key="NSFrame">{{20, 435}, {280, 9}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClipsSubviews">YES</bool>
+						<bool key="IBUIMultipleTouchEnabled">YES</bool>
+					</object>
+					<object class="IBUIActivityIndicatorView" id="213373208">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">-2147483356</int>
+						<string key="NSFrame">{{38, 382}, {37, 37}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<int key="IBUIStyle">0</int>
+					</object>
 				</object>
 				<string key="NSFrameSize">{320, 460}</string>
 				<reference key="NSSuperview"/>
@@ -483,25 +502,6 @@
 				</object>
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
-			</object>
-			<object class="IBUITextField" id="219788613">
-				<nil key="NSNextResponder"/>
-				<int key="NSvFlags">292</int>
-				<string key="NSFrame">{{122, 434}, {97, 31}}</string>
-				<bool key="IBUIOpaque">NO</bool>
-				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
-				<int key="IBUIContentVerticalAlignment">0</int>
-				<string key="IBUIText"/>
-				<int key="IBUIBorderStyle">3</int>
-				<object class="NSColor" key="IBUITextColor">
-					<int key="NSColorSpace">3</int>
-					<bytes key="NSWhite">MAA</bytes>
-					<reference key="NSCustomColorSpace" ref="888821731"/>
-				</object>
-				<bool key="IBUIClearsOnBeginEditing">YES</bool>
-				<bool key="IBUIAdjustsFontSizeToFit">YES</bool>
-				<float key="IBUIMinimumFontSize">1.700000e+01</float>
-				<object class="IBUITextInputTraits" key="IBUITextInputTraits"/>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -720,6 +720,22 @@
 					</object>
 					<int key="connectionID">66</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">ProgressBar</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="446952870"/>
+					</object>
+					<int key="connectionID">69</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">Spinner</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="213373208"/>
+					</object>
+					<int key="connectionID">70</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -764,15 +780,17 @@
 							<reference ref="963578517"/>
 							<reference ref="695537498"/>
 							<reference ref="750897259"/>
-							<reference ref="437848865"/>
 							<reference ref="1051385260"/>
-							<reference ref="988860931"/>
 							<reference ref="1034150884"/>
 							<reference ref="955734215"/>
 							<reference ref="680288267"/>
 							<reference ref="341483819"/>
 							<reference ref="749465191"/>
 							<reference ref="45947791"/>
+							<reference ref="446952870"/>
+							<reference ref="988860931"/>
+							<reference ref="437848865"/>
+							<reference ref="213373208"/>
 						</object>
 						<reference key="parent" ref="360949347"/>
 					</object>
@@ -785,11 +803,6 @@
 						<int key="objectID">9</int>
 						<reference key="object" ref="988860931"/>
 						<reference key="parent" ref="774585933"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">10</int>
-						<reference key="object" ref="219788613"/>
-						<reference key="parent" ref="360949347"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">11</int>
@@ -906,6 +919,16 @@
 						<reference key="object" ref="749465191"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">67</int>
+						<reference key="object" ref="446952870"/>
+						<reference key="parent" ref="774585933"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">68</int>
+						<reference key="object" ref="213373208"/>
+						<reference key="parent" ref="774585933"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -914,7 +937,6 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>-1.CustomClassName</string>
 					<string>-2.CustomClassName</string>
-					<string>10.IBPluginDependency</string>
 					<string>11.IBPluginDependency</string>
 					<string>12.IBPluginDependency</string>
 					<string>13.IBPluginDependency</string>
@@ -940,6 +962,8 @@
 					<string>49.IBPluginDependency</string>
 					<string>6.IBEditorWindowLastContentRect</string>
 					<string>6.IBPluginDependency</string>
+					<string>67.IBPluginDependency</string>
+					<string>68.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
 					<string>9.IBPluginDependency</string>
 				</object>
@@ -970,8 +994,9 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>{{438, 347}, {320, 480}}</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -997,7 +1022,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">66</int>
+			<int key="maxID">70</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1028,7 +1053,9 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSMutableArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>ProgressBar</string>
 							<string>SSLSwitch</string>
+							<string>Spinner</string>
 							<string>fromEmail</string>
 							<string>login</string>
 							<string>messageBody</string>
@@ -1043,7 +1070,9 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UIProgressView</string>
 							<string>UISwitch</string>
+							<string>UIActivityIndicatorView</string>
 							<string>UITextField</string>
 							<string>UITextField</string>
 							<string>UITextField</string>

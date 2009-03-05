@@ -30,15 +30,15 @@
 #import <UIKit/UIKit.h>
 #import <CFNetwork/CFNetwork.h>
 
-#define DEBUGGING_LOGS
+//#define DEBUGGING_LOGS
 //#undef DEBUGGING_LOGS
 
 #ifdef DEBUGGING_LOGS
 #define DEBUGLOG NSLog
 #else
 #define DEBUGLOG DummyLog
-void DummyLog(NSString * format, ...);
 #endif
+void DummyLog(NSString * format, ...);
 
 enum 
 {
@@ -83,6 +83,8 @@ extern NSString *kSKPSMTPPartContentTransferEncodingKey;
 
 -(void)messageSent:(SKPSMTPMessage *)message;
 -(void)messageFailed:(SKPSMTPMessage *)message error:(NSError *)error;
+@optional
+-(void)messageState:(SKPSMTPState)messageState;
 
 @end
 
