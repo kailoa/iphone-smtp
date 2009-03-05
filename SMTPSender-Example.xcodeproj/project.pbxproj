@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* SMTPSenderAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* SMTPSenderAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		2899E5220DE3E06400AC0155 /* SMTPSenderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* SMTPSenderViewController.xib */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28D7ACF80DDB3853001CB0EB /* SMTPSenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* SMTPSenderViewController.m */; };
+		2ABAE9160F5F1F7D00C6C0D3 /* Success.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ABAE9150F5F1F7D00C6C0D3 /* Success.png */; };
+		CABE26540EBB81B3008744A5 /* NSStream+SKPSMTPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F1123CAF0EB8F8B600DED5A8 /* NSStream+SKPSMTPExtensions.m */; };
+		CABE26550EBB81B3008744A5 /* SKPSMTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F1123CB10EB8F8B600DED5A8 /* SKPSMTPMessage.m */; };
+		CABE26580EBB81BE008744A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		CABE26590EBB81BE008744A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		CABE265A0EBB81BE008744A5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		CABE265B0EBB81BE008744A5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A6ABD70EB6E95300BA50E8 /* CFNetwork.framework */; };
+		CABE26640EBB823A008744A5 /* libsmtpmessage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CABE264F0EBB81A0008744A5 /* libsmtpmessage.a */; };
+		CABE26690EBB82D1008744A5 /* Base64Transcoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A6ABF10EB6FAE800BA50E8 /* Base64Transcoder.m */; };
+		CABE266A0EBB82D1008744A5 /* NSData+Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A6ABF30EB6FAE800BA50E8 /* NSData+Base64Additions.m */; };
+		F1497D000EDDCD000001BE3E /* HSK_CFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F1497CFF0EDDCD000001BE3E /* HSK_CFUtilities.m */; };
+		F1497D010EDDCD100001BE3E /* HSK_CFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F1497CFF0EDDCD000001BE3E /* HSK_CFUtilities.m */; };
+		F1A6ABD80EB6E95300BA50E8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A6ABD70EB6E95300BA50E8 /* CFNetwork.framework */; };
+		F1A6ACC90EB7B2B300BA50E8 /* test.vcf in Resources */ = {isa = PBXBuildFile; fileRef = F1A6ACC80EB7B2B300BA50E8 /* test.vcf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CABE266B0EBB82E8008744A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CABE264E0EBB81A0008744A5;
+			remoteInfo = libsmtpsender;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* SMTPSenderAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTPSenderAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* SMTPSenderAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTPSenderAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* SMTPSender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMTPSender.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* SMTPSenderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SMTPSenderViewController.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* SMTPSenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTPSenderViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* SMTPSenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTPSenderViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2ABAE9150F5F1F7D00C6C0D3 /* Success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Success.png; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* SMTPSender_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTPSender_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CABE264F0EBB81A0008744A5 /* libsmtpmessage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsmtpmessage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1123CAE0EB8F8B600DED5A8 /* NSStream+SKPSMTPExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSStream+SKPSMTPExtensions.h"; sourceTree = "<group>"; };
+		F1123CAF0EB8F8B600DED5A8 /* NSStream+SKPSMTPExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSStream+SKPSMTPExtensions.m"; sourceTree = "<group>"; };
+		F1123CB00EB8F8B600DED5A8 /* SKPSMTPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKPSMTPMessage.h; sourceTree = "<group>"; };
+		F1123CB10EB8F8B600DED5A8 /* SKPSMTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKPSMTPMessage.m; sourceTree = "<group>"; };
+		F1497CFE0EDDCD000001BE3E /* HSK_CFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSK_CFUtilities.h; sourceTree = "<group>"; };
+		F1497CFF0EDDCD000001BE3E /* HSK_CFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSK_CFUtilities.m; sourceTree = "<group>"; };
+		F1A6ABD70EB6E95300BA50E8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F1A6ABF00EB6FAE800BA50E8 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64Transcoder.h; path = Classes/Base64Transcoder.h; sourceTree = "<group>"; };
+		F1A6ABF10EB6FAE800BA50E8 /* Base64Transcoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Base64Transcoder.m; path = Classes/Base64Transcoder.m; sourceTree = "<group>"; };
+		F1A6ABF20EB6FAE800BA50E8 /* NSData+Base64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64Additions.h"; path = "Classes/NSData+Base64Additions.h"; sourceTree = "<group>"; };
+		F1A6ABF30EB6FAE800BA50E8 /* NSData+Base64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64Additions.m"; path = "Classes/NSData+Base64Additions.m"; sourceTree = "<group>"; };
+		F1A6ACC80EB7B2B300BA50E8 /* test.vcf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.vcf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CABE26640EBB823A008744A5 /* libsmtpmessage.a in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				F1A6ABD80EB6E95300BA50E8 /* CFNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CABE264D0EBB81A0008744A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CABE26580EBB81BE008744A5 /* Foundation.framework in Frameworks */,
+				CABE26590EBB81BE008744A5 /* UIKit.framework in Frameworks */,
+				CABE265A0EBB81BE008744A5 /* CoreGraphics.framework in Frameworks */,
+				CABE265B0EBB81BE008744A5 /* CFNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* SMTPSenderAppDelegate.h */,
+				1D3623250D0F684500981E51 /* SMTPSenderAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* SMTPSenderViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* SMTPSenderViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* SMTPSender.app */,
+				CABE264F0EBB81A0008744A5 /* libsmtpmessage.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				F1123CAD0EB8F89100DED5A8 /* Email (refresh from Handshake!) */,
+				2ABAE8CD0F5F19ED00C6C0D3 /* Attachments */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* SMTPSender_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F1A6ACC80EB7B2B300BA50E8 /* test.vcf */,
+				2ABAE9150F5F1F7D00C6C0D3 /* Success.png */,
+				2899E5210DE3E06400AC0155 /* SMTPSenderViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1A6ABD70EB6E95300BA50E8 /* CFNetwork.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2ABAE8CD0F5F19ED00C6C0D3 /* Attachments */ = {
+			isa = PBXGroup;
+			children = (
+				F1A6ABF00EB6FAE800BA50E8 /* Base64Transcoder.h */,
+				F1A6ABF10EB6FAE800BA50E8 /* Base64Transcoder.m */,
+				F1A6ABF20EB6FAE800BA50E8 /* NSData+Base64Additions.h */,
+				F1A6ABF30EB6FAE800BA50E8 /* NSData+Base64Additions.m */,
+			);
+			name = Attachments;
+			sourceTree = "<group>";
+		};
+		F1123CAD0EB8F89100DED5A8 /* Email (refresh from Handshake!) */ = {
+			isa = PBXGroup;
+			children = (
+				F1497CFE0EDDCD000001BE3E /* HSK_CFUtilities.h */,
+				F1497CFF0EDDCD000001BE3E /* HSK_CFUtilities.m */,
+				F1123CAE0EB8F8B600DED5A8 /* NSStream+SKPSMTPExtensions.h */,
+				F1123CAF0EB8F8B600DED5A8 /* NSStream+SKPSMTPExtensions.m */,
+				F1123CB00EB8F8B600DED5A8 /* SKPSMTPMessage.h */,
+				F1123CB10EB8F8B600DED5A8 /* SKPSMTPMessage.m */,
+			);
+			name = "Email (refresh from Handshake!)";
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CABE264B0EBB81A0008744A5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* SMTPSender */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "SMTPSender" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CABE266C0EBB82E8008744A5 /* PBXTargetDependency */,
+			);
+			name = SMTPSender;
+			productName = SMTPSender;
+			productReference = 1D6058910D05DD3D006BFB54 /* SMTPSender.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CABE264E0EBB81A0008744A5 /* libsmtpmessage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CABE265D0EBB81DC008744A5 /* Build configuration list for PBXNativeTarget "libsmtpmessage" */;
+			buildPhases = (
+				CABE264B0EBB81A0008744A5 /* Headers */,
+				CABE264C0EBB81A0008744A5 /* Sources */,
+				CABE264D0EBB81A0008744A5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libsmtpmessage;
+			productName = libsmtpsender;
+			productReference = CABE264F0EBB81A0008744A5 /* libsmtpmessage.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SMTPSender-Example" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* SMTPSender */,
+				CABE264E0EBB81A0008744A5 /* libsmtpmessage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* SMTPSenderViewController.xib in Resources */,
+				F1A6ACC90EB7B2B300BA50E8 /* test.vcf in Resources */,
+				2ABAE9160F5F1F7D00C6C0D3 /* Success.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* SMTPSenderAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* SMTPSenderViewController.m in Sources */,
+				CABE26690EBB82D1008744A5 /* Base64Transcoder.m in Sources */,
+				CABE266A0EBB82D1008744A5 /* NSData+Base64Additions.m in Sources */,
+				F1497D000EDDCD000001BE3E /* HSK_CFUtilities.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CABE264C0EBB81A0008744A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1497D010EDDCD100001BE3E /* HSK_CFUtilities.m in Sources */,
+				CABE26540EBB81B3008744A5 /* NSStream+SKPSMTPExtensions.m in Sources */,
+				CABE26550EBB81B3008744A5 /* SKPSMTPMessage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CABE266C0EBB82E8008744A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CABE264E0EBB81A0008744A5 /* libsmtpmessage */;
+			targetProxy = CABE266B0EBB82E8008744A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SMTPSender_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = SMTPSender;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SMTPSender_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = SMTPSender;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.1;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.1;
+			};
+			name = Release;
+		};
+		CABE26500EBB81A0008744A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = libsmtpmessage;
+			};
+			name = Debug;
+		};
+		CABE26510EBB81A0008744A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = libsmtpmessage;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "SMTPSender" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SMTPSender-Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CABE265D0EBB81DC008744A5 /* Build configuration list for PBXNativeTarget "libsmtpmessage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CABE26500EBB81A0008744A5 /* Debug */,
+				CABE26510EBB81A0008744A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
