@@ -61,7 +61,7 @@
     return [NSData decodeBase64ForString:[[decodeString stringByReplacingOccurrencesOfString:@"-" withString:@"+"] stringByReplacingOccurrencesOfString:@"_" withString:@"/"]];
 }
 
--(NSString *)encodeBase64ForData
+- (NSString *)encodeBase64ForData
 {
     NSString *encodedString = nil;
     
@@ -84,12 +84,12 @@
     return encodedString;
 }
                                     
--(NSString *)encodeWebSafeBase64ForData
+- (NSString *)encodeWebSafeBase64ForData
 {
     return [[[self encodeBase64ForData] stringByReplacingOccurrencesOfString:@"+" withString:@"-"] stringByReplacingOccurrencesOfString:@"/" withString:@"_"];
 }
                                     
--(NSString *)encodeWrappedBase64ForData
+- (NSString *)encodeWrappedBase64ForData
 {
     NSString *encodedString = nil;
     

@@ -81,10 +81,10 @@ extern NSString *kSKPSMTPPartContentTransferEncodingKey;
 @protocol SKPSMTPMessageDelegate
 @required
 
--(void)messageSent:(SKPSMTPMessage *)message;
--(void)messageFailed:(SKPSMTPMessage *)message error:(NSError *)error;
+- (void)messageSent:(SKPSMTPMessage *)message;
+- (void)messageFailed:(SKPSMTPMessage *)message error:(NSError *)error;
 @optional
--(void)messageState:(SKPSMTPState)messageState;
+- (void)messageState:(SKPSMTPState)messageState;
 
 @end
 
@@ -123,7 +123,7 @@ extern NSString *kSKPSMTPPartContentTransferEncodingKey;
     // Content support flags
     BOOL server8bitMessages;
     
-    id <SKPSMTPMessageDelegate> delegate;
+    NSObject <SKPSMTPMessageDelegate> *delegate;
     
     NSTimeInterval connectTimeout;
     
@@ -150,7 +150,7 @@ extern NSString *kSKPSMTPPartContentTransferEncodingKey;
 
 @property(nonatomic, assign) NSTimeInterval connectTimeout;
 
-@property(nonatomic, assign) id <SKPSMTPMessageDelegate> delegate;
+@property(nonatomic, assign) NSObject <SKPSMTPMessageDelegate> *delegate;
 
 - (BOOL)send;
 

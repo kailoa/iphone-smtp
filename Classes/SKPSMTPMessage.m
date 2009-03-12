@@ -337,7 +337,8 @@ NSString *kSKPSMTPPartContentTransferEncodingKey = @"kSKPSMTPPartContentTransfer
             [self stopWatchdog];
             
             DEBUGLOG(@"S: %@", tmpLine);
-            [delegate messageState:sendState];
+            if ([delegate respondsToSelector:@selector(messageState:)])
+                [delegate messageState:sendState];
             
             switch (sendState)
             {

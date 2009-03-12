@@ -142,7 +142,7 @@
 }
 
 #pragma mark SKPSMTPMessage Delegate Methods
--(void)messageState:(SKPSMTPState)messageState;
+- (void)messageState:(SKPSMTPState)messageState;
 {
     NSLog(@"HighestState:%d", HighestState);
     if (messageState > HighestState)
